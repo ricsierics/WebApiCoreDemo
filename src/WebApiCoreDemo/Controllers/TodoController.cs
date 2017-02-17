@@ -25,8 +25,8 @@ namespace WebApiCoreDemo.Controllers
         {
             return _todoRepository.GetAll();
         }
+        
 
-       
         [HttpGet("{id}", Name = "GetTodo")]
         public IActionResult GetById(long id)
         {

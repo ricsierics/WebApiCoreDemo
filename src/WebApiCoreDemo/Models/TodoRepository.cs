@@ -7,6 +7,12 @@ namespace WebApiCoreDemo.Models
     {
         private readonly TodoContext _context;
 
+        public TodoRepository(TodoContext context)
+        {
+            _context = context;
+            Add(new TodoItem { Name = "Item1" });
+        }
+
         public void Add(TodoItem item)
         {
             _context.TodoItems.Add(item);
